@@ -3,46 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal Portfolio</title>
+    <title>zdyrski-dot-com</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="terminal-container">
         <header>
-            <h1>User@System: ~%</h1>
+            <h1>andrew@server: ~%</h1>
         </header>
 
         <nav>
             <button data-section="home">Home</button>
+            <button data-section="skills">Skills</button>
             <button data-section="resume">Resume</button>
-            <button data-section="projects">Projects</button>
         </nav>
 
         <main id="content">
             <section id="home" class="content-section">
-                <p><span class="prompt">guest@computer:~$</span> cat welcome.txt</p>
-                <p>Welcome to my personal terminal. This is the HOME section.</p>
+                <p><span class="prompt">andrew@server: ~%</span> cat welcome.txt</p>
+                <p>Andrew Zdyrski - Software Engineer</p>
+                <p>Tucson, AZ</p>
+                <p><a href="mailto:andrew@zdyrski.com">andrew@zdyrski.com</a></p>
                 <p>You can use the navigation above to explore my work.</p>
                 <p><span class="cursor"></span></p>
             </section>
 
             <section id="resume" class="content-section">
-                <p><span class="prompt">guest@computer:~$</span> ls resume/</p>
+                <p><span class="prompt">andrew@server: ~%</span> ls resume/</p>
                 <h2>Resume</h2>
-                <p>[Placeholder: Experience Section]</p>
-                <p>[Placeholder: Education Section]</p>
-                <p>[Placeholder: Skills Section]</p>
+                <ul class="file-links">
+                    <li><a href="files/andrew-resume.pdf" target="_blank" rel="noopener">andrew-resume.pdf</a></li>
+                    <li><a href="files/andrew-resume.docx" download>andrew-resume.docx</a></li>
+                </ul>
                 <p><span class="cursor"></span></p>
             </section>
 
-            <section id="projects" class="content-section">
-                <p><span class="prompt">guest@computer:~$</span> cd projects && ls</p>
-                <h2>Projects</h2>
-                <ul>
-                    <li>Project Alpha - A cool thing I built.</li>
-                    <li>Project Beta - Another amazing project.</li>
-                    <li>Project Gamma - Something else entirely.</li>
-                </ul>
+            <section id="skills" class="content-section">
+                <p><span class="prompt">andrew@server: ~%</span> cat skills.txt</p>
+                <h2>Skills</h2>
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools &amp; Technologies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Languages</td>
+                            <td>C#, VB.NET, JavaScript, C++, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Frameworks &amp; Libraries</td>
+                            <td>.NET Framework, ASP.NET MVC, Entity Framework</td>
+                        </tr>
+                        <tr>
+                            <td>Frontend Frameworks</td>
+                            <td>React, Angular, Vue.js</td>
+                        </tr>
+                        <tr>
+                            <td>Databases</td>
+                            <td>SQL Server (2008&ndash;2025), Oracle, MS Access, various no-SQL offerings</td>
+                        </tr>
+                        <tr>
+                            <td>Web &amp; Integration</td>
+                            <td>HTML5, CSS3, REST/SOAP, OAuth, Windows Identity Framework</td>
+                        </tr>
+                        <tr>
+                            <td>DevOps &amp; Testing</td>
+                            <td>Visual Studio and VS Code, Git, Octopus Deploy, CI/CD pipelines, mock frameworks</td>
+                        </tr>
+                        <tr>
+                            <td>Architecture</td>
+                            <td>Roadmaps, feasibility studies, analysis of alternatives, infrastructure design, capacity planning</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <p><span class="cursor"></span></p>
             </section>
         </main>

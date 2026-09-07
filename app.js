@@ -1,18 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('nav button');
     const sections = document.querySelectorAll('.content-section');
+    const container = document.getElementById('terminal-container');
 
     const navigateTo = (sectionId) => {
-        // Hide all sections
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
+        // 1. Trigger Glitch
+        container.classList.add('glitch-active');
 
-        // Show the requested section
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-        }
+        // 2. Wait for glitch to settle slightly, then swap
+        setTimeout(() => {
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the requested section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // 3. Remove glitch class
+            container.classList.remove('glitch-active');
+        }, 150);
     };
 
     navButtons.forEach(button => {
