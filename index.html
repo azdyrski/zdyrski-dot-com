@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            body {
-                text-align: center;
-                background-color:rgb(15, 20, 20);
-                font-family: sans-serif;
-                color: white;
-            }
-        </style>
-        <title>zdyrski.com</title>
-    </head>
-    <body>
-        <h1>Coming soon</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="terminal-container">
+        <header>
+            <h1>User@System: ~%</h1>
+        </header>
+
+        <nav>
+            <button data-section="home">Home</button>
+            <button data-section="resume">Resume</button>
+            <button data-section="projects">Projects</button>
+        </nav>
+
+        <main id="content">
+            <section id="home" class="content-section">
+                <p><span class="prompt">guest@computer:~$</span> cat welcome.txt</p>
+                <p>Welcome to my personal terminal. This is the HOME section.</p>
+                <p>You can use the navigation above to explore my work.</p>
+                <p><span class="cursor"></span></p>
+            </section>
+
+            <section id="resume" class="content-section">
+                <p><span class="prompt">guest@computer:~$</span> ls resume/</p>
+                <h2>Resume</h2>
+                <p>[Placeholder: Experience Section]</p>
+                <p>[Placeholder: Education Section]</p>
+                <p>[Placeholder: Skills Section]</p>
+                <p><span class="cursor"></span></p>
+            </section>
+
+            <section id="projects" class="content-section">
+                <p><span class="prompt">guest@computer:~$</span> cd projects && ls</p>
+                <h2>Projects</h2>
+                <ul>
+                    <li>Project Alpha - A cool thing I built.</li>
+                    <li>Project Beta - Another amazing project.</li>
+                    <li>Project Gamma - Something else entirely.</li>
+                </ul>
+                <p><span class="cursor"></span></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
