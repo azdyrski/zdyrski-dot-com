@@ -3,6 +3,7 @@
     --terminal-dim: #6b4a00;
     --bg-color: #050505;
     --font-family: 'Courier New', Courier, monospace;
+    --glow: 0 0 2px rgba(255, 176, 0, 0.8), 0 0 6px rgba(255, 176, 0, 0.6), 0 0 14px rgba(255, 176, 0, 0.5), 0 0 28px rgba(255, 176, 0, 0.3);
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     font-size: 1.8rem;
-    text-shadow: 0 0 5px rgba(255, 176, 0, 0.4);
+    text-shadow: var(--glow);
 }
 
 /* CRT Scanline & Warp Effect */
