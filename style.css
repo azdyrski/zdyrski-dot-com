@@ -1,6 +1,6 @@
 :root {
-    --terminal-white: #ffffff;
-    --terminal-dim: #444;
+    --terminal-white: #ffb000;
+    --terminal-dim: #6b4a00;
     --bg-color: #050505;
     --font-family: 'Courier New', Courier, monospace;
 }
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     font-size: 1.8rem;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 5px rgba(255, 176, 0, 0.4);
 }
 
 /* CRT Scanline & Warp Effect */
