@@ -34,4 +34,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Default view
     navigateTo('home');
+
+    // Color theme switcher (amber -> green -> white -> amber ...)
+    const colorSwitcher = document.getElementById('color-switcher');
+    const themes = ['amber', 'green', 'white'];
+    const storedTheme = localStorage.getItem('theme');
+    let themeIndex = Math.max(themes.indexOf(storedTheme), 0);
+
+    const applyTheme = (theme) => {
+        // "amber" is the default palette, so no attribute is needed
+        if (theme === 'amber') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+
+        localStorage.setItem('theme', theme);
+    };
+
+    applyTheme(themes[themeIndex]);
+
+    colorSwitcher.addEventListener('click', () => {
+        container.classList.add('glitch-active');
+
+        setTimeout(() => {
+            themeIndex = (themeIndex + 1) % themes.length;
+            applyTheme(themes[themeIndex]);
+
+            container.classList.remove('glitch-active');
+        }, 150);
+    });
 });
