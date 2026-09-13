@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Color theme switcher (amber -> green -> white -> amber ...)
     const colorSwitcher = document.getElementById('color-switcher');
+    const colorSwitcherLabel = colorSwitcher.querySelector('.color-switcher-label');
     const themes = ['amber', 'green', 'white'];
     const storedTheme = localStorage.getItem('theme');
     let themeIndex = Math.max(themes.indexOf(storedTheme), 0);
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.setAttribute('data-theme', theme);
         }
 
+        colorSwitcherLabel.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
         localStorage.setItem('theme', theme);
     };
 
